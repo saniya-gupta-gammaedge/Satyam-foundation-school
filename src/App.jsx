@@ -1,0 +1,28 @@
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import PrincipalsNote from './components/PrincipalsNote'
+import Academics from './components/Academics'
+import Gallery from './components/Gallery'
+import Testimonials from './components/Testimonials'
+import AdmissionForm from './components/AdmissionForm'
+import Footer from './components/Footer'
+import './App.css'
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+      <PrincipalsNote />
+      <Academics />
+      <Gallery />
+      <Testimonials />
+      <AdmissionForm />
+      <Footer />
+    </>
+  )
+}
+
+export default App
