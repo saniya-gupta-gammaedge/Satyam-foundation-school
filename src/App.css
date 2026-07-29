@@ -7,27 +7,35 @@
   gap: 12px;
   padding: 16px 24px;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(255, 105, 145, 0.15);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
 .navbar-brand {
-  font-size: 1.25rem;
+  font-family: 'Baloo 2', system-ui, sans-serif;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: var(--primary-dark);
+  color: var(--purple);
 }
 
 .navbar-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 18px;
   font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.navbar-links a {
+  padding: 6px 12px;
+  border-radius: 999px;
 }
 
 .navbar-links a:hover {
-  color: var(--primary);
+  background: var(--bg-alt);
+  color: var(--teal);
 }
 
 /* Placeholder image blocks */
@@ -35,11 +43,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #c7d3ea;
+  border: 3px dashed var(--orange);
   border-radius: var(--radius);
-  background: var(--bg-alt);
+  background: #fff4e0;
   color: var(--text-light);
-  font-size: 0.9rem;
+  font-weight: 600;
+  font-size: 0.95rem;
   min-height: 200px;
 }
 
@@ -59,18 +68,19 @@
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 .tagline {
-  font-size: 1.3rem;
-  color: var(--accent);
-  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--pink);
+  font-weight: 700;
   margin-bottom: 0.3em;
 }
 
 .hero-sub {
   color: var(--text-light);
+  font-weight: 600;
 }
 
 .hero-image {
@@ -80,17 +90,23 @@
 
 .cta-button {
   display: inline-block;
-  background: var(--primary);
+  background: var(--teal);
   color: #fff;
-  padding: 12px 28px;
+  padding: 14px 32px;
   border-radius: 999px;
-  font-weight: 600;
+  font-family: 'Baloo 2', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
   border: none;
   cursor: pointer;
+  box-shadow: 0 6px 0 #1c9184;
+  transition: transform 0.1s;
 }
 
 .cta-button:hover {
-  background: var(--primary-dark);
+  background: #29b0a3;
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #1c9184;
 }
 
 /* Generic sections */
@@ -143,6 +159,7 @@
 .signature {
   font-style: italic;
   color: var(--text-light);
+  font-weight: 600;
 }
 
 /* Cards */
@@ -155,12 +172,22 @@
 .card {
   background: #fff;
   border-radius: var(--radius);
-  padding: 24px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 28px;
+  box-shadow: 0 6px 18px rgba(138, 95, 255, 0.12);
+  border-top: 6px solid var(--purple);
+}
+
+.card:nth-child(2) {
+  border-top-color: var(--teal);
+}
+
+.card:nth-child(3) {
+  border-top-color: var(--orange);
 }
 
 .quote-card {
-  background: var(--bg-alt);
+  background: #fff;
+  border-top-color: var(--pink);
 }
 
 .quote-text {
@@ -171,6 +198,7 @@
   color: var(--text-light);
   font-size: 0.9rem;
   margin: 0;
+  font-weight: 700;
 }
 
 /* Gallery */
@@ -184,6 +212,16 @@
   min-height: 150px;
 }
 
+.gallery-item:nth-child(2n) {
+  border-color: var(--teal);
+  background: #e3f8f5;
+}
+
+.gallery-item:nth-child(3n) {
+  border-color: var(--pink);
+  background: #ffeef2;
+}
+
 /* Admission form */
 .admission-form {
   display: flex;
@@ -191,39 +229,46 @@
   gap: 16px;
   max-width: 500px;
   margin: 0 auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(255, 133, 82, 0.15);
 }
 
 .admission-form input,
 .admission-form textarea {
-  padding: 12px 16px;
-  border: 1px solid #d3dcee;
-  border-radius: 10px;
+  padding: 14px 18px;
+  border: 2px solid #ffd9b3;
+  border-radius: 14px;
   font: inherit;
   resize: vertical;
 }
 
 .admission-form input:focus,
 .admission-form textarea:focus {
-  outline: 2px solid var(--primary);
+  outline: none;
+  border-color: var(--teal);
 }
 
 .form-status {
   text-align: center;
-  color: var(--primary-dark);
+  color: var(--teal);
+  font-weight: 700;
 }
 
 .form-status.error {
-  color: #d9534f;
+  color: #e0576b;
 }
 
 /* Footer */
 .footer {
   text-align: center;
   padding: 32px 24px;
-  background: var(--primary-dark);
+  background: var(--purple);
   color: #fff;
 }
 
 .footer p {
   margin: 4px 0;
+  font-weight: 600;
 }

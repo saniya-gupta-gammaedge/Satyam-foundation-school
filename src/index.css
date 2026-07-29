@@ -1,13 +1,16 @@
 :root {
-  --primary: #2f6fed;
-  --primary-dark: #1f4fb8;
-  --accent: #ff9f43;
-  --bg: #fffdf9;
-  --bg-alt: #f4f7fd;
-  --text: #333333;
-  --text-light: #666666;
-  --radius: 16px;
-  font: 16px/1.6 system-ui, 'Segoe UI', Roboto, sans-serif;
+  --yellow: #ffc93c;
+  --orange: #ff8552;
+  --pink: #ff6f91;
+  --teal: #2ec4b6;
+  --purple: #8a5fff;
+  --dark: #2d2a4a;
+  --bg: #fffbf0;
+  --bg-alt: #eafaf7;
+  --text: #3a3652;
+  --text-light: #6b6785;
+  --radius: 24px;
+  font: 16px/1.6 'Quicksand', system-ui, sans-serif;
   color: var(--text);
   background: var(--bg);
 }
@@ -21,7 +24,8 @@ body {
 }
 
 h1, h2, h3 {
-  color: var(--primary-dark);
+  font-family: 'Baloo 2', system-ui, sans-serif;
+  color: var(--dark);
   margin: 0 0 0.5em;
   line-height: 1.2;
 }
