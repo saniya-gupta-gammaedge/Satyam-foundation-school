@@ -4,6 +4,12 @@ const PROGRAMS = [
   { icon: "🎒", title: "Middle (Class 6–8)", desc: "Deeper subject learning with focus on critical thinking and life skills." },
 ]
 
+const ACTIVITIES = [
+  { icon: "⚽", title: "Sports" },
+  { icon: "🎨", title: "Art & Craft" },
+  { icon: "🎵", title: "Music & Dance" },
+]
+
 export default function Academics() {
   return (
     <section id="academics" className="section">
@@ -14,6 +20,15 @@ export default function Academics() {
             <div className="card-icon">{p.icon}</div>
             <h3>{p.title}</h3>
             <p>{p.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <h3 className="activities-title">Co-curricular Activities</h3>
+      <div className="activities">
+        {ACTIVITIES.map((a) => (
+          <div key={a.title} className="activity-pill">
+            <span>{a.icon}</span> {a.title}
           </div>
         ))}
       </div>

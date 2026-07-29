@@ -131,11 +131,55 @@
   font-weight: 600;
 }
 
-.hero-image {
-  flex: 1 1 320px;
-  min-height: 280px;
+.hero-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-family: 'Baloo 2', system-ui, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.hero-image-wrap {
   position: relative;
+  flex: 1 1 320px;
   z-index: 1;
+}
+
+.hero-image {
+  min-height: 280px;
+}
+
+.admission-sticker {
+  position: absolute;
+  top: -14px;
+  right: 10px;
+  background: var(--orange);
+  color: #fff;
+  font-family: 'Baloo 2', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+  transform: rotate(6deg);
+  box-shadow: 0 4px 10px rgba(255, 133, 82, 0.4);
+  z-index: 2;
 }
 
 .blob {
@@ -215,6 +259,35 @@
   font-style: italic;
   color: var(--text-light);
   font-weight: 600;
+}
+
+.about-timing {
+  font-weight: 700;
+  color: var(--teal);
+}
+
+/* Activities */
+.activities-title {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.activities {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.activity-pill {
+  background: #fff;
+  border: 2px solid var(--yellow);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* Cards */
@@ -343,14 +416,32 @@
 /* Footer */
 .footer {
   text-align: center;
-  padding: 32px 24px;
+  padding: 40px 24px 24px;
   background: var(--purple);
   color: #fff;
 }
 
-.footer p {
-  margin: 4px 0;
+.footer-brand {
+  color: #fff;
+  margin-bottom: 0.2em;
+}
+
+.footer-tagline {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.footer-details p {
+  margin: 6px 0;
   font-weight: 600;
+}
+
+.footer-copy {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 0.85rem;
+  opacity: 0.85;
 }
 
 /* Mobile tweaks */
