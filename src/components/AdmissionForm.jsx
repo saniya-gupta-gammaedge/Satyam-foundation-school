@@ -1,6 +1,7 @@
 import { useState } from "react"
 
-const EMPTY = { name: "", contact: "", message: "" }
+const EMPTY = { name: "", email: "", phone: "", message: "" }
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export default function AdmissionForm() {
   const [form, setForm] = useState(EMPTY)
@@ -10,8 +11,12 @@ export default function AdmissionForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (!form.name.trim() || !form.contact.trim() || !form.message.trim()) {
+    if (!form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.message.trim()) {
       setStatus({ ok: false, text: "Please fill in all fields." })
+      return
+    }
+    if (!EMAIL_RE.test(form.email.trim())) {
+      setStatus({ ok: false, text: "Please enter a valid email address." })
       return
     }
     setStatus({ ok: null, text: "Sending..." })
@@ -45,10 +50,17 @@ export default function AdmissionForm() {
           onChange={handleChange}
         />
         <input
-          type="text"
-          name="contact"
-          placeholder="Phone or Email"
-          value={form.contact}
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={form.email}
+          onChange={handleChange}
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Your Phone Number"
+          value={form.phone}
           onChange={handleChange}
         />
         <textarea
