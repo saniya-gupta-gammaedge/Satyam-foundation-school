@@ -29,7 +29,7 @@ export default function Hero() {
       </div>
       <Reveal className="hero-image-wrap">
         <span className="admission-sticker">Admissions Open</span>
-        <img src={playground} alt="Students playing at Satyam Foundation School" className="hero-image blob" />
+        <img src={playground} alt="Students playing at Satyam Foundation School" className="hero-image" />
       </Reveal>
     </section>
   )
