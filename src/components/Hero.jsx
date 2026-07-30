@@ -1,5 +1,5 @@
-import Placeholder from "./Placeholder"
 import Reveal from "./Reveal"
+import playground from "../assets/playground.png"
 
 export default function Hero() {
   return (
@@ -11,7 +11,7 @@ export default function Hero() {
       <span className="hero-float star-2">✦</span>
       <span className="hero-float cloud-1">☁️</span>
       <div className="hero-text">
-        <span className="hero-badge">Nursery to Class 8 · State Board</span>
+        <span className="hero-badge">Nursery to Class 8</span>
         <h1>Satyam Foundation School</h1>
         <p className="tagline">Foundation of the Future</p>
         <p className="hero-sub">Nurturing young minds with joy, curiosity & care</p>
@@ -22,18 +22,14 @@ export default function Hero() {
             <span className="stat-label">Years of Excellence</span>
           </div>
           <div className="stat">
-            <span className="stat-num">Nur–8</span>
+            <span className="stat-num">Nursery–8th</span>
             <span className="stat-label">Classes Offered</span>
-          </div>
-          <div className="stat">
-            <span className="stat-num">3</span>
-            <span className="stat-label">Co-curricular Activities</span>
           </div>
         </div>
       </div>
       <Reveal className="hero-image-wrap">
         <span className="admission-sticker">Admissions Open</span>
-        <Placeholder label="School Photo" className="hero-image blob" />
+        <img src={playground} alt="Students playing at Satyam Foundation School" className="hero-image blob" />
       </Reveal>
     </section>
   )

@@ -1,14 +1,14 @@
 :root {
-  --yellow: #ffc93c;
-  --orange: #ff8552;
-  --pink: #ff6f91;
-  --teal: #2ec4b6;
-  --purple: #8a5fff;
-  --dark: #2d2a4a;
+  --yellow: #f2b705;
+  --orange: #f2622e;
+  --pink: #e0356b;
+  --teal: #16a394;
+  --purple: #6a3fd1;
+  --dark: #221f3d;
   --bg: #fffbf0;
-  --bg-alt: #eafaf7;
-  --text: #3a3652;
-  --text-light: #6b6785;
+  --bg-alt: #e4f6f2;
+  --text: #2a2740;
+  --text-light: #5a5578;
   --radius: 24px;
   font: 16px/1.6 'Quicksand', system-ui, sans-serif;
   color: var(--text);
