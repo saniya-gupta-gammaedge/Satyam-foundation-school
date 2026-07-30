@@ -1,3 +1,5 @@
+import Reveal from "./Reveal"
+
 const PROGRAMS = [
   { icon: "🧸", title: "Pre-Primary", desc: "Nursery, LKG & UKG — play-based learning that builds curiosity and basic skills." },
   { icon: "📚", title: "Primary (Class 1–5)", desc: "Strong foundations in language, math, science, and creativity." },
@@ -15,12 +17,14 @@ export default function Academics() {
     <section id="academics" className="section">
       <h2 className="section-title">Our Programs</h2>
       <div className="cards">
-        {PROGRAMS.map((p) => (
-          <div key={p.title} className="card">
-            <div className="card-icon">{p.icon}</div>
-            <h3>{p.title}</h3>
-            <p>{p.desc}</p>
-          </div>
+        {PROGRAMS.map((p, i) => (
+          <Reveal key={p.title} style={{ transitionDelay: `${i * 100}ms` }}>
+            <div className="card">
+              <div className="card-icon">{p.icon}</div>
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+            </div>
+          </Reveal>
         ))}
       </div>
 

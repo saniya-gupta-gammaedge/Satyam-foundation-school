@@ -1,9 +1,10 @@
 import Placeholder from "./Placeholder"
+import Reveal from "./Reveal"
 
 export default function PrincipalsNote() {
   return (
     <section id="principal" className="section alt">
-      <div className="section-inner">
+      <Reveal className="section-inner">
         <Placeholder label="Principal's Photo" className="section-image small" />
         <div>
           <h2>From the Principal's Desk</h2>
@@ -16,7 +17,7 @@ export default function PrincipalsNote() {
           </p>
           <p className="signature">— Principal, Satyam Foundation School</p>
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }

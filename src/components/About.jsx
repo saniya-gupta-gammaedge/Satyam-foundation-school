@@ -1,9 +1,10 @@
 import Placeholder from "./Placeholder"
+import Reveal from "./Reveal"
 
 export default function About() {
   return (
     <section id="about" className="section">
-      <div className="section-inner reverse">
+      <Reveal className="section-inner reverse">
         <Placeholder label="Campus Photo" className="section-image" />
         <div>
           <h2>About Us</h2>
@@ -16,7 +17,7 @@ export default function About() {
           </p>
           <p className="about-timing">🕒 School Timings: 8:00 AM – 2:00 PM</p>
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }

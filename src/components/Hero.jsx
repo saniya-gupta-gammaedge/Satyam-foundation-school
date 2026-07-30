@@ -1,4 +1,5 @@
 import Placeholder from "./Placeholder"
+import Reveal from "./Reveal"
 
 export default function Hero() {
   return (
@@ -6,6 +7,9 @@ export default function Hero() {
       <div className="hero-shape shape-1" />
       <div className="hero-shape shape-2" />
       <div className="hero-shape shape-3" />
+      <span className="hero-float star-1">✦</span>
+      <span className="hero-float star-2">✦</span>
+      <span className="hero-float cloud-1">☁️</span>
       <div className="hero-text">
         <span className="hero-badge">Nursery to Class 8 · State Board</span>
         <h1>Satyam Foundation School</h1>
@@ -27,10 +31,10 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="hero-image-wrap">
+      <Reveal className="hero-image-wrap">
         <span className="admission-sticker">Admissions Open</span>
         <Placeholder label="School Photo" className="hero-image blob" />
-      </div>
+      </Reveal>
     </section>
   )
 }
