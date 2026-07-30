@@ -406,7 +406,13 @@
   gap: 24px;
 }
 
+.cards > .reveal {
+  height: 100%;
+}
+
 .card {
+  height: 100%;
+  box-sizing: border-box;
   background: #fff;
   border-radius: var(--radius);
   padding: 28px;
