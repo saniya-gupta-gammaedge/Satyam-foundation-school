@@ -1,14 +1,17 @@
 import Placeholder from "./Placeholder"
 import Reveal from "./Reveal"
 import playground from "../assets/playground.png"
-import assembly from "../assets/assembly.png"
+import classroom from "../assets/classroom.jpg"
+import flagHoisting from "../assets/flag-hoisting.jpg"
+import blocksActivity from "../assets/blocks-activity.jpg"
+import victoryGroup from "../assets/victory-group.jpg"
 
 const SLOTS = [
-  { label: "Classroom" },
+  { label: "Classroom", img: classroom },
   { label: "Playground", img: playground },
-  { label: "Annual Day", img: assembly },
-  { label: "Sports Day" },
-  { label: "Art & Craft" },
+  { label: "Annual Day", img: flagHoisting },
+  { label: "Sports Day", img: victoryGroup },
+  { label: "Art & Craft", img: blocksActivity },
   { label: "Library" },
 ]
 

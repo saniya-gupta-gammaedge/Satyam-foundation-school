@@ -1,11 +1,11 @@
-import Placeholder from "./Placeholder"
 import Reveal from "./Reveal"
+import studentsGroup from "../assets/students-group.jpg"
 
 export default function About() {
   return (
     <section id="about" className="section">
       <Reveal className="section-inner reverse">
-        <Placeholder label="Campus Photo" className="section-image" />
+        <img src={studentsGroup} alt="Students of Satyam Foundation School" className="section-image" />
         <div>
           <h2>About Us</h2>
           <p>
