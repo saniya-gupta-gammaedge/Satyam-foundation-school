@@ -1,16 +1,22 @@
 import Reveal from "./Reveal"
-import playground from "../assets/playground.png"
 import classroom from "../assets/classroom.jpg"
+import fieldTrip from "../assets/field-trip.jpg"
 import flagHoisting from "../assets/flag-hoisting.jpg"
-import blocksActivity from "../assets/blocks-activity.jpg"
 import studentsGroup from "../assets/students-group.jpg"
+import artCraft from "../assets/art-craft.jpg"
+import rainyDay from "../assets/rainy-day.jpg"
+import diwali from "../assets/diwali.jpg"
+import scienceExhibition from "../assets/science-exhibition.jpg"
 
 const SLOTS = [
   { label: "Classroom", img: classroom },
-  { label: "Playground", img: playground },
+  { label: "Field Trip", img: fieldTrip },
   { label: "Annual Day", img: flagHoisting },
   { label: "Sports Day", img: studentsGroup },
-  { label: "Art & Craft", img: blocksActivity },
+  { label: "Art & Craft", img: artCraft },
+  { label: "Rainy Day Activity", img: rainyDay },
+  { label: "Diwali Celebration", img: diwali },
+  { label: "Science Exhibition", img: scienceExhibition },
 ]
 
 export default function Gallery() {
