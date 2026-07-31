@@ -6,6 +6,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 export default function AdmissionForm() {
   const [form, setForm] = useState(EMPTY)
   const [status, setStatus] = useState(null)
+  const sending = status?.ok === null
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
@@ -70,7 +71,9 @@ export default function AdmissionForm() {
           value={form.message}
           onChange={handleChange}
         />
-        <button type="submit" className="cta-button">Submit Query</button>
+        <button type="submit" className="cta-button" disabled={sending}>
+          {sending ? "Sending..." : "Submit Query"}
+        </button>
         {status && (
           <p className={status.ok === false ? "form-status error" : "form-status"}>
             {status.text}

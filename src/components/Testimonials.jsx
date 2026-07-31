@@ -14,8 +14,12 @@ export default function Testimonials() {
         {QUOTES.map((t, i) => (
           <Reveal key={t.name} style={{ transitionDelay: `${i * 100}ms` }}>
             <div className="card quote-card">
+              <div className="stars">★★★★★</div>
               <p className="quote-text">"{t.quote}"</p>
-              <p className="quote-name">{t.name}</p>
+              <div className="quote-footer">
+                <span className="quote-avatar">{t.name.charAt(0)}</span>
+                <p className="quote-name">{t.name}</p>
+              </div>
             </div>
           </Reveal>
         ))}

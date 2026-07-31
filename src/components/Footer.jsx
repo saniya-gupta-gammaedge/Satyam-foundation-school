@@ -25,6 +25,14 @@ export default function Footer() {
           <p>Monday to Saturday</p>
         </div>
       </div>
+      <div className="footer-map">
+        <iframe
+          title="School Location"
+          src="https://www.google.com/maps?q=Near+Shiv+Mandir,+Hanuman+Nagar,+Rasuliya,+Narmadapuram,+MP&output=embed"
+          loading="lazy"
+          allowFullScreen
+        />
+      </div>
       <p className="footer-copy">© {new Date().getFullYear()} Satyam Foundation School. All rights reserved.</p>
     </footer>
   )

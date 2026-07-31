@@ -7,6 +7,7 @@ import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
 import AdmissionForm from './components/AdmissionForm'
 import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Testimonials />
       <AdmissionForm />
       <Footer />
+      <WhatsAppButton />
     </>
   )
 }
