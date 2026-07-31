@@ -582,6 +582,13 @@
   border-radius: var(--radius);
   display: block;
   transition: transform 0.15s;
+  box-sizing: border-box;
+}
+
+.placeholder.gallery-item {
+  min-height: 0;
+  height: 150px;
+  display: flex;
 }
 
 .gallery-item:hover {

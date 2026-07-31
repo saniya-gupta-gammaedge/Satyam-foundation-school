@@ -1,11 +1,11 @@
 import Reveal from "./Reveal"
-import studentsGroup from "../assets/students-group.jpg"
+import victoryGroup from "../assets/victory-group.jpg"
 
 export default function About() {
   return (
     <section id="about" className="section">
       <Reveal className="section-inner reverse">
-        <img src={studentsGroup} alt="Students of Satyam Foundation School" className="section-image" />
+        <img src={victoryGroup} alt="Students of Satyam Foundation School" className="section-image" />
         <div>
           <h2>About Us</h2>
           <p>
