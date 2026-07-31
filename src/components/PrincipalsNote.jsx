@@ -1,6 +1,6 @@
+import Placeholder from "./Placeholder"
 import Reveal from "./Reveal"
 import directorPhoto from "../assets/director.jpg"
-import principalPhoto from "../assets/principal.jpg"
 
 const LEADERS = [
   {
@@ -17,7 +17,7 @@ const LEADERS = [
     title: "From the Principal's Desk",
     name: "Mrs. Sakshi Gupta",
     role: "Principal",
-    photo: principalPhoto,
+    photoLabel: "Principal's Photo",
     note: `Every child carries unique potential, and our purpose is to nurture it with care,
       discipline, and joy. Our dedicated teachers work closely with every student to
       build strong foundations in learning and character. We look forward to welcoming
@@ -32,7 +32,11 @@ export default function PrincipalsNote() {
       <div className="leadership">
         {LEADERS.map((l, i) => (
           <Reveal key={l.name} className="section-inner" style={{ transitionDelay: `${i * 100}ms` }}>
-            <img src={l.photo} alt={l.name} className="section-image small" />
+            {l.photo ? (
+              <img src={l.photo} alt={l.name} className="section-image small" />
+            ) : (
+              <Placeholder label={l.photoLabel} className="section-image small" />
+            )}
             <div>
               <h3>{l.title}</h3>
               <p>{l.note}</p>

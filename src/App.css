@@ -367,8 +367,9 @@
 }
 
 .section-image.small {
-  min-height: 180px;
+  height: 260px;
   flex: 1 1 200px;
+  object-position: top;
 }
 
 .signature {
