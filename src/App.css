@@ -20,6 +20,27 @@
   scroll-margin-top: 76px;
 }
 
+.shlok-banner {
+  background: linear-gradient(90deg, #fff3d6, #ffe9d6);
+  text-align: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ffd9a0;
+}
+
+.shlok-banner p {
+  margin: 0;
+  font-family: 'Baloo 2', system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+@media (max-width: 700px) {
+  .shlok-banner p {
+    font-size: 0.8rem;
+  }
+}
+
 /* Navbar */
 .navbar {
   display: flex;

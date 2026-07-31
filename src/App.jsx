@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import ShlokBanner from './components/ShlokBanner'
 import Hero from './components/Hero'
 import About from './components/About'
 import PrincipalsNote from './components/PrincipalsNote'
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <ShlokBanner />
       <Hero />
       <About />
       <PrincipalsNote />
