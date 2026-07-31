@@ -1,7 +1,7 @@
 const LINKS = [
   ["Home", "#home"],
   ["About", "#about"],
-  ["Principal's Desk", "#principal"],
+  ["Leadership", "#principal"],
   ["Academics", "#academics"],
   ["Gallery", "#gallery"],
   ["Parents Speak", "#testimonials"],

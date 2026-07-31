@@ -1,23 +1,47 @@
 import Placeholder from "./Placeholder"
 import Reveal from "./Reveal"
 
+const LEADERS = [
+  {
+    title: "From the Director's Desk",
+    name: "Mr. Ashutosh Gupta",
+    role: "Director",
+    photoLabel: "Director's Photo",
+    note: `Welcome to Satyam Foundation School. Since 2010, our mission has been to build a
+      learning environment where every child feels safe, valued, and inspired to grow.
+      We are committed to providing quality education and the resources our students
+      need to succeed, today and in the future.`,
+  },
+  {
+    title: "From the Principal's Desk",
+    name: "Mrs. Sakshi Gupta",
+    role: "Principal",
+    photoLabel: "Principal's Photo",
+    note: `Every child carries unique potential, and our purpose is to nurture it with care,
+      discipline, and joy. Our dedicated teachers work closely with every student to
+      build strong foundations in learning and character. We look forward to welcoming
+      your child into our school family.`,
+  },
+]
+
 export default function PrincipalsNote() {
   return (
     <section id="principal" className="section alt">
-      <Reveal className="section-inner">
-        <Placeholder label="Principal's Photo" className="section-image small" />
-        <div>
-          <h2>From the Principal's Desk</h2>
-          <p>
-            Welcome to Satyam Foundation School. We believe every child carries unique
-            potential, and our purpose is to nurture it with care, discipline, and joy.
-            Our dedicated teachers work closely with every student to build strong
-            foundations in learning and character. We look forward to welcoming your
-            child into our school family.
-          </p>
-          <p className="signature">— Principal, Satyam Foundation School</p>
-        </div>
-      </Reveal>
+      <h2 className="section-title">Our Leadership</h2>
+      <div className="leadership">
+        {LEADERS.map((l, i) => (
+          <Reveal key={l.name} className="section-inner" style={{ transitionDelay: `${i * 100}ms` }}>
+            <Placeholder label={l.photoLabel} className="section-image small" />
+            <div>
+              <h3>{l.title}</h3>
+              <p>{l.note}</p>
+              <p className="signature">
+                — {l.name}, {l.role}
+              </p>
+            </div>
+          </Reveal>
+        ))}
+      </div>
     </section>
   )
 }
