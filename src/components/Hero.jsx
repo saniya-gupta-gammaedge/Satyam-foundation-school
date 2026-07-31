@@ -25,7 +25,6 @@ export default function Hero() {
           </div>
         </div>
         <Reveal className="hero-image-wrap">
-          <div className="hero-wave" />
           <img src={playground} alt="Students playing at Satyam Foundation School" className="hero-image" />
           <span className="admission-sticker">Admissions Open</span>
         </Reveal>
