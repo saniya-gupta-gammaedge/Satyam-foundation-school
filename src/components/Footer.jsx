@@ -28,7 +28,7 @@ export default function Footer() {
       <div className="footer-map">
         <iframe
           title="School Location"
-          src="https://www.google.com/maps?q=Near+Shiv+Mandir,+Hanuman+Nagar,+Rasuliya,+Narmadapuram,+MP&output=embed"
+          src="https://www.google.com/maps?q=Satyam+Foundation+School+Narmadapuram+MP&output=embed"
           loading="lazy"
           allowFullScreen
         />
