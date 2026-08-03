@@ -719,6 +719,25 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .hero-inner {
+    gap: 32px;
+  }
+
+  .hero-text {
+    flex-basis: 320px;
+  }
+
+  .hero-image-wrap {
+    flex-basis: 320px;
+    max-width: 420px;
+  }
+
+  .leadership .section-inner:nth-child(2) {
+    flex-direction: row;
+  }
+}
+
 @media (max-width: 700px) {
   .navbar {
     padding: 12px 16px;
@@ -763,5 +782,41 @@
 
   .admission-form {
     padding: 20px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+
+  .footer-col a {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-brand {
+    font-size: 1.05rem;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .gallery-grid,
+  .cards {
+    grid-template-columns: 1fr;
   }
 }
