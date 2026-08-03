@@ -6,7 +6,8 @@ import resend
 from http.server import BaseHTTPRequestHandler
 
 MAX_LEN = 1000
-EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
+EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$")
+PHONE_RE = re.compile(r"^\d{10}$")
 
 
 class handler(BaseHTTPRequestHandler):
@@ -26,6 +27,8 @@ class handler(BaseHTTPRequestHandler):
             return self._respond(400, {"ok": False, "error": "Name, email, phone, and message are required"})
         if not EMAIL_RE.match(email):
             return self._respond(400, {"ok": False, "error": "Invalid email address"})
+        if not PHONE_RE.match(phone):
+            return self._respond(400, {"ok": False, "error": "Phone number must be 10 digits"})
         if len(name) > MAX_LEN or len(email) > MAX_LEN or len(phone) > MAX_LEN or len(message) > MAX_LEN:
             return self._respond(400, {"ok": False, "error": "Input too long"})
 

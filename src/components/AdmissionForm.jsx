@@ -1,7 +1,8 @@
 import { useState } from "react"
 
 const EMPTY = { name: "", email: "", phone: "", message: "" }
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/
+const PHONE_RE = /^\d{10}$/
 
 export default function AdmissionForm() {
   const [form, setForm] = useState(EMPTY)
@@ -18,6 +19,10 @@ export default function AdmissionForm() {
     }
     if (!EMAIL_RE.test(form.email.trim())) {
       setStatus({ ok: false, text: "Please enter a valid email address." })
+      return
+    }
+    if (!PHONE_RE.test(form.phone.trim())) {
+      setStatus({ ok: false, text: "Please enter a valid 10-digit phone number." })
       return
     }
     setStatus({ ok: null, text: "Sending..." })
@@ -63,6 +68,8 @@ export default function AdmissionForm() {
           placeholder="Your Phone Number"
           value={form.phone}
           onChange={handleChange}
+          maxLength={10}
+          inputMode="numeric"
         />
         <textarea
           name="message"
