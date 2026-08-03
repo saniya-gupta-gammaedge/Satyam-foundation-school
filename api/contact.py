@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import socket
 import resend
 
 from http.server import BaseHTTPRequestHandler
@@ -8,6 +9,15 @@ from http.server import BaseHTTPRequestHandler
 MAX_LEN = 1000
 EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$")
 PHONE_RE = re.compile(r"^\d{10}$")
+
+
+def domain_exists(domain):
+    try:
+        socket.setdefaulttimeout(3)
+        socket.getaddrinfo(domain, None)
+        return True
+    except socket.gaierror:
+        return False
 
 
 class handler(BaseHTTPRequestHandler):
@@ -27,6 +37,8 @@ class handler(BaseHTTPRequestHandler):
             return self._respond(400, {"ok": False, "error": "Name, email, phone, and message are required"})
         if not EMAIL_RE.match(email):
             return self._respond(400, {"ok": False, "error": "Invalid email address"})
+        if not domain_exists(email.rsplit("@", 1)[1]):
+            return self._respond(400, {"ok": False, "error": "Email domain does not exist"})
         if not PHONE_RE.match(phone):
             return self._respond(400, {"ok": False, "error": "Phone number must be 10 digits"})
         if len(name) > MAX_LEN or len(email) > MAX_LEN or len(phone) > MAX_LEN or len(message) > MAX_LEN:
