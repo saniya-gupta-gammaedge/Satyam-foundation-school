@@ -818,6 +818,28 @@
     gap: 32px;
   }
 
+  .hero-image-wrap {
+    margin-top: 18px;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-slideshow {
+    aspect-ratio: 4 / 3;
+  }
+
+  .admission-sticker {
+    top: 8px;
+    right: 8px;
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  .about-image {
+    display: none;
+  }
+
   .section {
     padding: 40px 16px;
   }

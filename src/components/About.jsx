@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section id="about" className="section">
       <Reveal className="section-inner reverse">
-        <img src={victoryGroup} alt="Students of Satyam Foundation School" className="section-image" />
+        <img src={victoryGroup} alt="Students of Satyam Foundation School" className="section-image about-image" />
         <div>
           <h2>About Us</h2>
           <p>
