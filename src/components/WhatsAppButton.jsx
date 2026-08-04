@@ -1,7 +1,9 @@
+const MESSAGE = "Hi 👋 I'm interested in admission at Satyam Foundation School 🎒 Could you share more details?"
+
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/919893274622"
+      href={`https://wa.me/919893274622?text=${encodeURIComponent(MESSAGE)}`}
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-button"
