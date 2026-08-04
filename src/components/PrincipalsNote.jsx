@@ -1,6 +1,6 @@
 import Reveal from "./Reveal"
-import directorPhoto from "../assets/director.jpg"
-import principalPhoto from "../assets/principal.jpg"
+import directorPhoto from "../assets/director.webp"
+import principalPhoto from "../assets/principal.webp"
 
 const LEADERS = [
   {

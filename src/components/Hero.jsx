@@ -1,5 +1,5 @@
 import Reveal from "./Reveal"
-import playground from "../assets/playground.png"
+import playground from "../assets/playground.webp"
 
 export default function Hero() {
   return (

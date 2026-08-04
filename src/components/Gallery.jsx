@@ -1,12 +1,12 @@
 import Reveal from "./Reveal"
-import classroom from "../assets/classroom.jpg"
-import fieldTrip from "../assets/field-trip.jpg"
-import flagHoisting from "../assets/flag-hoisting.jpg"
-import studentsGroup from "../assets/students-group.jpg"
-import artCraft from "../assets/art-craft.jpg"
-import rainyDay from "../assets/rainy-day.jpg"
-import diwali from "../assets/diwali.jpg"
-import scienceExhibition from "../assets/science-exhibition.jpg"
+import classroom from "../assets/classroom.webp"
+import fieldTrip from "../assets/field-trip.webp"
+import flagHoisting from "../assets/flag-hoisting.webp"
+import studentsGroup from "../assets/students-group.webp"
+import artCraft from "../assets/art-craft.webp"
+import rainyDay from "../assets/rainy-day.webp"
+import diwali from "../assets/diwali.webp"
+import scienceExhibition from "../assets/science-exhibition.webp"
 
 const SLOTS = [
   { label: "Classroom", img: classroom },

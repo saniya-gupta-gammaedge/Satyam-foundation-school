@@ -1,5 +1,5 @@
 import Reveal from "./Reveal"
-import victoryGroup from "../assets/victory-group.jpg"
+import victoryGroup from "../assets/victory-group.webp"
 
 export default function About() {
   return (
