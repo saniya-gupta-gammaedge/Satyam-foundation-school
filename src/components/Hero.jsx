@@ -1,5 +1,5 @@
 import Reveal from "./Reveal"
-import playground from "../assets/playground.webp"
+import HeroSlideshow from "./HeroSlideshow"
 
 export default function Hero() {
   return (
@@ -25,7 +25,7 @@ export default function Hero() {
           </div>
         </div>
         <Reveal className="hero-image-wrap">
-          <img src={playground} alt="Students playing at Satyam Foundation School" className="hero-image" />
+          <HeroSlideshow />
           <span className="admission-sticker">Admissions Open</span>
         </Reveal>
       </div>

@@ -1,16 +1,15 @@
 :root {
-  --yellow: #f2b705;
-  --orange: #f2622e;
-  --pink: #e0356b;
-  --teal: #16a394;
-  --purple: #6a3fd1;
-  --dark: #221f3d;
-  --bg: #fffbf0;
-  --bg-alt: #e4f6f2;
-  --text: #2a2740;
-  --text-light: #5a5578;
-  --radius: 24px;
-  font: 16px/1.6 'Quicksand', system-ui, sans-serif;
+  --blue: #0b3c68;
+  --teal: #14b8a6;
+  --yellow: #f4b400;
+  --bg: #fffdf7;
+  --bg-alt: #fff6e0;
+  --card-bg: #ffffff;
+  --footer-bg: #0f172a;
+  --text: #1f2937;
+  --text-light: #6b7280;
+  --radius: 20px;
+  font: 16px/1.6 'Inter', system-ui, sans-serif;
   color: var(--text);
   background: var(--bg);
 }
@@ -32,10 +31,10 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Baloo 2', system-ui, sans-serif;
-  color: var(--dark);
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: var(--blue);
   margin: 0 0 0.5em;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 p {
